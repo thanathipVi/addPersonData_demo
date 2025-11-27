@@ -1,1 +1,26 @@
-<p>dialog</p>
+<h2 mat-dialog-title>เพิ่มข้อมูล</h2>
+<div mat-dialog-content>
+  <form>
+    <mat-form-field class="w-full" style="display:block;">
+      <mat-label>ชื่อ</mat-label>
+      <input matInput [(ngModel)]="data.name" name="name">
+    </mat-form-field>
+
+    <mat-form-field class="w-full" style="display:block;">
+      <mat-label>date of birth</mat-label>
+      <input matInput [matDatepicker]="picker" [(ngModel)]="data.birthDate" name="birthDate" (dateChange)="calculateAge()">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field style="display:block;">
+      <mat-label>อายุ</mat-label>
+      <input matInput [value]="data.age" disabled>
+    </mat-form-field>
+  </form>
+</div>
+
+<div mat-dialog-actions style="text-align:right;">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-raised-button color="primary" (click)="save()">Save</button>
+</div>

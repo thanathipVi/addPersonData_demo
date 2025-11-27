@@ -1,0 +1,6 @@
+/* You can add global styles here */ 
+body { font-family: Roboto, Arial, sans-serif; margin: 16px; }
+.container { max-width: 900px; margin: 0 auto; }
+table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+th, td { padding: 8px; border-bottom: 1px solid #ddd; text-align: left; }
+button { margin-right: 8px; }

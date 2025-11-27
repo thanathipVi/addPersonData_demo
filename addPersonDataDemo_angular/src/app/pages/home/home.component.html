@@ -1,1 +1,19 @@
-<p>home</p>
+<h1>People</h1>
+<button mat-raised-button color="primary" (click)="openDialog()">เพิ่มข้อมูล</button>
+
+<table>
+  <thead>
+    <tr>
+      <th>ชื่อ</th>
+      <th>วันเกิด</th>
+      <th>อายุ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of dataSource">
+      <td>{{p.name}}</td>
+      <td>{{p.birthDate | date:'dd/MM/yyyy'}}</td>
+      <td>{{p.age}}</td>
+    </tr>
+  </tbody>
+</table>
